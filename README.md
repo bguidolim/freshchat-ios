@@ -19,7 +19,7 @@ After addition please add  "-all_load" flag in Project Settings, General > Build
 
 
 ## Existing minor bug 
-1. App version always comes as 1.0 (We are fixng this in upcoming release) - Fixed
+1. App version always comes as 1.0 (We are fixng this in upcoming release)
 2. Bitcode embed - Fixed
 
 
