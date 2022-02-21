@@ -15,11 +15,8 @@ pod 'FreshchatSDK', :git => 'https://github.com/freshdesk/freshchat-ios', :branc
 end
 ```
 
-After addition please add  "-all_load" flag in Project Settings, General > Build Settings > Other Linker flags
-
-
-## Existing minor bug 
-1. App version always comes as 1.0 (We are fixng this in upcoming release)
+## Existing minor bug - Fixed
+1. App version always comes as 1.0.0 - Fixed
 2. Bitcode embed - Fixed
 
 
