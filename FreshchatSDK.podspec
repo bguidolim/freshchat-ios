@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         		 = "FreshchatSDK"
-  s.version      		 = "5.0.5"
+  s.version      		 = "5.0.6"
   s.summary      		 = "Freshchat iOS SDK - Modern messaging software that your sales and customer engagement teams will love."
   s.description  		 = <<-DESC
                    			Modern messaging software that your sales and customer engagement teams will love.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.preserve_paths      = "FreshchatSDK.xcframework"
   s.resources 			 = "FreshchatSDK/FCResources.bundle", "FreshchatSDK/FreshchatModels.bundle", "FreshchatSDK/FCLocalization.bundle"
   s.frameworks 			 = "Foundation", "AVFoundation", "AudioToolbox", "CoreMedia", "CoreData", "ImageIO", "Photos", "SystemConfiguration", "Security", "WebKit", "CoreServices"
-  s.xcconfig       		 = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/FreshchatSDK"' }
+  s.xcconfig       		 = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/FreshchatSDK"', 'OTHER_LDFLAGS' => '-ObjC -all_load' }
   s.requires_arc 		 = true
   s.vendored_frameworks = "FreshchatSDK.xcframework"
 
