@@ -39,6 +39,8 @@
 		028C6919251894740013E7DC /* CustomThemeFile.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = CustomThemeFile.plist; sourceTree = SOURCE_ROOT; };
 		0CD20E6C304056A509E9E5B2 /* Pods-SwiftSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSample/Pods-SwiftSample.debug.xcconfig"; sourceTree = "<group>"; };
 		0EA68094E36C2BE4FEC47AFB /* Pods_SwiftSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C67632B27BBD80E00C833EC /* SwiftSampleDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftSampleDebug.entitlements; sourceTree = "<group>"; };
+		7CF1081D27BE2AC6000A5FE9 /* SwiftSampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftSampleRelease.entitlements; sourceTree = "<group>"; };
 		CE28680F1F6FC5BD0099DB91 /* SwiftSample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE684E4F1F6FC20A0047DA52 /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE684E521F6FC20A0047DA52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,8 @@
 		CE684E511F6FC20A0047DA52 /* SwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				7CF1081D27BE2AC6000A5FE9 /* SwiftSampleRelease.entitlements */,
+				7C67632B27BBD80E00C833EC /* SwiftSampleDebug.entitlements */,
 				CE684E521F6FC20A0047DA52 /* AppDelegate.swift */,
 				CE684E541F6FC20A0047DA52 /* ViewController.swift */,
 				028C6919251894740013E7DC /* CustomThemeFile.plist */,
@@ -496,11 +500,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftSample/SwiftSampleDebug.entitlements;
 				DEVELOPMENT_TEAM = PKUQ4ZWJH3;
 				INFOPLIST_FILE = SwiftSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.SwiftSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshdesk.example.hotlineios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSample/SwiftSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -514,11 +519,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftSample/SwiftSampleRelease.entitlements;
 				DEVELOPMENT_TEAM = PKUQ4ZWJH3;
 				INFOPLIST_FILE = SwiftSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.SwiftSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshdesk.example.hotlineios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSample/SwiftSample-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

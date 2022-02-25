@@ -21,9 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initFreshchatSDK() {
-        let fchatConfig = FreshchatConfig.init(appID: "AppId", andAppKey: "AppKey") //Enter your AppID and AppKey here
+        let fchatConfig = FreshchatConfig.init(appID: "c69641e9-8a85-4da1-858e-77169b0c76a7", andAppKey: "23d7240c-0176-4de1-acc4-d63c534b59be") //Enter your AppID and AppKey here
         fchatConfig.themeName = "CustomThemeFile"
         Freshchat.sharedInstance().initWith(fchatConfig)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Freshchat.sharedInstance().setPushRegistrationToken(deviceToken)
+    }
+        
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if Freshchat.sharedInstance().isFreshchatNotification(userInfo) {
+            Freshchat.sharedInstance().handleRemoteNotification(userInfo, andAppstate: application.applicationState)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
