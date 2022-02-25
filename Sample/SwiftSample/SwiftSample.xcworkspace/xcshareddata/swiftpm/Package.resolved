@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FreshchatSDK",
+        "repositoryURL": "https://github.com/freshworks/freshchat-ios",
+        "state": {
+          "branch": "cocoapods_xcframework",
+          "revision": "e4138d22d8b008eb7683f428476838e4aca70a95",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
