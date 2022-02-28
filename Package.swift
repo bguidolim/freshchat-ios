@@ -15,5 +15,10 @@ let package = Package(
             name: "FreshchatSDKTarget",
             path: "FreshchatSDK.xcframework"
         ),
+        .target(
+            name: "FreshchatSDK",
+            dependencies: [],
+            exclude: ["Sample"]
+        ),
     ]
 )
